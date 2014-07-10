@@ -1,0 +1,44 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>测试check.js</title>
+<script type="text/javascript" src="./check.js"></script>
+</head>
+<body>
+	check.js：
+	<p>由于框架中判断方法过于粗粒度，并且不够统一，现编写一套标准的判断方法，统一名称为check开头，默认为单输入参数，输入待判断的字符串，返回判断的结果，符合方法名称描述则返回true，反之亦然，新添方法请在方法索引中补全。</p>
+	<hr />
+	check方法列表：
+	<br />
+	<select id="list" name="list" multiple="true" size="10"
+		onclick="selectFunction()" ondblclick="selectFunction()">
+		<option value="checkInt">checkInt【纯粹数字】</option>
+		<option value="checkPositiveInt">checkPositiveInt【正整数（可包含+）】</option>
+		<option value="checkNegativeInt">checkNegativeInt【负整数】</option>
+		<option value="checkFloat">checkFloat【纯粹小数】</option>
+		<option value="checkFloat2">checkFloat2【纯粹小数】</option>
+		<option value="checkFloat4">checkFloat4【纯粹小数】</option>
+		<option value="checkFloat4or2">checkFloat4or2【纯粹小数】</option>
+		<option value="checkPositiveFloat">checkPositiveFloat【正小数（可包含+）】</option>
+		<option value="checkPositiveFloat2">checkPositiveFloat2【正小数（可包含+）】</option>
+		<option value="checkPositiveFloat4">checkPositiveFloat4【正小数（可包含+）】</option>
+		<option value="checkPositiveFloat4or2">checkPositiveFloat4or2【正小数（可包含+）】</option>
+		<option value="checkNegativeFloat">checkNegativeFloat【负小数】</option>
+		<option value="checkNegativeFloat2">checkNegativeFloat2【负小数】</option>
+		<option value="checkNegativeFloat4">checkNegativeFloat4【负小数】</option>
+		<option value="checkNegativeFloat4or2">checkNegativeFloat4or2【负小数】</option>
+		<option value="checkChar">checkChar【纯粹字符】</option>
+		<option value="checkSigner">checkSigner【纯粹标点】</option>
+	</select>
+	<button onclick="selectFunction()">选择</button>
+	<hr />
+
+	<input type="text" id="testFunction" value="" />&nbsp;
+	<input type="text" id="tester" value="+100" />&nbsp;
+	<button value="check" onclick="checkCheckJs()">检查</button>
+	&nbsp;
+	<button value="check" onclick="javascript:location.reload();">
+		刷新测试页面</button>
+	<hr />
+</body>
+</html>
